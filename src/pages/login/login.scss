@@ -1,0 +1,56 @@
+page-login {
+    .btn{
+        border-radius: 25px;
+            box-shadow: 2px 15px 35px rgba(0, 0, 0, 0.35);
+            font-size: 1.4em;
+            background-color:#09A0EF;
+            color: white;
+            height: 2.5em;
+            width: 80%;
+            margin-left: 9%;
+            // background: linear-gradient( to right, rgb(13, 104, 189)(24, 110, 156), #09A0EF(99, 153, 182));
+            
+        }
+        .Si{
+            font-size: 2.5em;
+            font-weight: bold;
+            color:#09A0EF;
+            margin:0 ;
+            padding: 0;
+        }
+        .Su{
+            font-size: 1.6em;
+            color:faint grey;
+            font-weight: bold;
+            padding: 0;
+            position: absolute;
+        
+        }
+    
+        .el1{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 30vh;
+        }
+        .list{
+            border-radius: 20px;
+            border:  1.5px solid gray;
+            margin-top: 10%;
+            text-align: center;
+        }
+        .fpass{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .privacy{
+            text-align: center;
+             color:#09A0EF;
+             margin-top: 20%;
+         }
+         .Signs{
+             margin-top: 6%;
+             text-align: inherit;
+             position: sticky;
+         }
+}

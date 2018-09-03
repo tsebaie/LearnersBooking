@@ -1,0 +1,7 @@
+{
+  "name": "LicenceFirebase",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

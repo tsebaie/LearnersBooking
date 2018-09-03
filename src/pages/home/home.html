@@ -1,0 +1,203 @@
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="drivingschool">
+      <ion-segment-button value="learners">
+        Leaners Application
+      </ion-segment-button>
+      <ion-segment-button value="Licence">
+        Licence Application
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+
+  <div [ngSwitch]="drivingschool">
+    <ion-list *ngSwitchCase="'learners'">
+      <ion-item>
+        <ion-label fixed>First Name</ion-label>
+        <ion-input type="text" id="fname" name="fname  " [(ngModel)]="fname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Last Name</ion-label>
+        <ion-input type="text" id="lname" name="lname  " [(ngModel)]="lname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Identification No</ion-label>
+        <ion-input type="text" id="Idno" name="Idno" maxlength="13" [(ngModel)]="Idno"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Race">Race</ion-label>
+        <ion-select [(ngModel)]="Race">
+          <ion-option>African</ion-option>
+          <ion-option>Coloured</ion-option>
+          <ion-option>Caucasian</ion-option>
+          <ion-option>Indian</ion-option>
+          <ion-option>Other</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Gender">Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option>Male</ion-option>
+          <ion-option>Female</ion-option>
+          <ion-option>Other</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Nationality">Nationality</ion-label>
+        <ion-select [(ngModel)]="nationality">
+          <ion-option> Mauretanian</ion-option>
+          <ion-option> Mauritian</ion-option>
+          <ion-option>Moroccan</ion-option>
+          <ion-option>Mozambiquean</ion-option>
+          <ion-option>Namibianv</ion-option>
+          <ion-option>Nigerian</ion-option>
+          <ion-option>Senegalese</ion-option>
+          <ion-option>Seychellois</ion-option>
+          <ion-option>Sierra Leonean</ion-option>
+          <ion-option> Somali</ion-option>
+          <ion-option>South African</ion-option>
+          <ion-option>Sudanese</ion-option>
+          <ion-option>Swazi</ion-option>
+          <ion-option>Tanzanian</ion-option>
+          <ion-option> Togolese</ion-option>
+          <ion-option> Tunisian</ion-option>
+          <ion-option> Ugandan</ion-option>
+          <ion-option> Zambian</ion-option>
+          <ion-option> Zimbabwean</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Language" >Language</ion-label>
+        <ion-input type="text" id="language" name="language  " [(ngModel)]="language"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="StreetAdress">Street Adress</ion-label>
+        <ion-input type="text" id="streetadress" name="streetadress  " [(ngModel)]="streetadress"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Province" >Province</ion-label>
+        <ion-input type="text" id="Province" name="Province  " [(ngModel)]="province"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="PostalCode">PostalCode</ion-label>
+        <ion-input type="text" id="PostalCode" name="PostalCode" maxlength="5"  [(ngModel)]="postalcode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Code">Code</ion-label>
+        <ion-select [(ngModel)]="code">
+          <ion-option>A1</ion-option>
+          <ion-option>A</ion-option>
+          <ion-option>B</ion-option>
+          <ion-option>EB</ion-option>
+          <ion-option>C1</ion-option>
+          <ion-option>C</ion-option>
+          <ion-option>EC1</ion-option>
+          <ion-option>EC</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="TelephoneNo" >TelephoneNo</ion-label>
+        <ion-input type="text" id="telephoneno" name="TelephoneNo" maxlength="10"  [(ngModel)]="telephoneno"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <input type="file" accept="image/png, image/jpeg" (change)="insertImage($event)"  [(ngModel)]="url"> <br> 
+        <img [src]="url" *ngIf="url != null"><br>
+      </ion-item> -->
+      <ion-fab bottom class="btnn">
+        <button ion-button block class="btn" (click)="submit()">Submit</button>
+      </ion-fab>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Licence'">
+      <ion-item>
+        <ion-label fixed>First Name</ion-label>
+        <ion-input type="text" id="fname" name="fname  " [(ngModel)]="fname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Last Name</ion-label>
+        <ion-input type="text" id="lname" name="lname  " [(ngModel)]="lname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Identification No</ion-label>
+        <ion-input type="text" id="Idno" name="Idno" maxlength="13"  [(ngModel)]="Idno"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Race">Race</ion-label>
+        <ion-select [(ngModel)]="Race">
+          <ion-option>African</ion-option>
+          <ion-option>Coloured</ion-option>
+          <ion-option>Caucasian</ion-option>
+          <ion-option>Indian</ion-option>
+          <ion-option>Other</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Gender">Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option>Male</ion-option>
+          <ion-option>Female</ion-option>
+          <ion-option>Other</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Nationality">Nationality</ion-label>
+        <ion-select [(ngModel)]="nationality">
+          <ion-option> Mauretanian</ion-option>
+          <ion-option> Mauritian</ion-option>
+          <ion-option>Moroccan</ion-option>
+          <ion-option>Mozambiquean</ion-option>
+          <ion-option>Namibianv</ion-option>
+          <ion-option>Nigerian</ion-option>
+          <ion-option>Senegalese</ion-option>
+          <ion-option>Seychellois</ion-option>
+          <ion-option>Sierra Leonean</ion-option>
+          <ion-option> Somali</ion-option>
+          <ion-option>South African</ion-option>
+          <ion-option>Sudanese</ion-option>
+          <ion-option>Swazi</ion-option>
+          <ion-option>Tanzanian</ion-option>
+          <ion-option> Togolese</ion-option>
+          <ion-option> Tunisian</ion-option>
+          <ion-option> Ugandan</ion-option>
+          <ion-option> Zambian</ion-option>
+          <ion-option> Zimbabwean</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Language" >Language</ion-label>
+        <ion-input type="text" id="language" name="language  " [(ngModel)]="language"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="StreetAdress">Street Adress</ion-label>
+        <ion-input type="text" id="streetadress" name="streetadress  " [(ngModel)]="streetadress"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="Province" >Province</ion-label>
+        <ion-input type="text" id="Province" name="Province  " [(ngModel)]="province"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="PostalCode">PostalCode</ion-label>
+        <ion-input type="text" id="PostalCode" name="PostalCode  " [(ngModel)]="postalcode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="LicenceNo" >LicenceNo</ion-label>
+        <ion-input type="text" id="LicenceNo" name="LicenceNo" maxlength="7"  [(ngModel)]="LicenceNo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label for="TelephoneNo" >TelephoneNo</ion-label>
+        <ion-input type="text" id="telephoneno" name="TelephoneNo" maxlength="10"  [(ngModel)]="telephoneno"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <input type="file" accept="image/png, image/jpeg" (change)="insertImage($event)"  [(ngModel)]="url"> <br> 
+        <img [src]="url" *ngIf="url != null"><br>
+      </ion-item> -->
+    </ion-list>
+    <ion-fab bottom class="btnn">
+      <button ion-button block class="btn" (click)="submit1()">Submit</button>
+    </ion-fab>
+  </div>
+
+
+</ion-content>

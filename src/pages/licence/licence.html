@@ -1,0 +1,122 @@
+<!--
+  Generated template for the LicencePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding class="all">
+  <ion-list>
+    <ion-item>
+      <ion-label for="Locations">Locations</ion-label>
+      <ion-select [(ngModel)]="Locations">
+        <ion-option>Langlaagte</ion-option>
+        <ion-option>Xavier Junction</ion-option>
+        <ion-option>Roodeport</ion-option>
+        <ion-option>Krugersdorp</ion-option>
+        <ion-option>Kliptown</ion-option>
+        <ion-option>Randburg</ion-option>
+        <ion-option>Sandton</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<div>
+  <ion-item class="date">
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+</div>
+  <ion-list>
+    <h2>Accepted Cards</h2>
+    <ion-icon name="card"></ion-icon>
+  </ion-list>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Name of Card</ion-label>
+      <ion-input type="text" placeholder="FNB"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Credit card number</ion-label>
+      <ion-input type="text" placeholder="1111-2222-3333-4444"></ion-input>
+    </ion-item>
+    <div>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/YY" [(ngModel)]="myDate1"></ion-datetime>
+    </ion-item>
+  </div>
+    <ion-item>
+      <ion-label stacked>CVV</ion-label>
+      <ion-input type="password" placeholder="123"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <h2>Deposit Payment Method</h2><br>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            Bank
+          </ion-col>
+          <ion-col col-auto>
+            FNB
+          </ion-col>
+         </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Bank Account
+          </ion-col>
+          <ion-col col-auto>
+            9726-548-574
+          </ion-col>
+         </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Brunch Code
+          </ion-col>
+          <ion-col col-auto>
+            Protea-2001
+          </ion-col>
+         </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Reference
+          </ion-col>
+          <ion-col col-auto class="cc">
+            {{ref}}
+          </ion-col>
+         </ion-row>
+      </ion-grid>
+<!--       
+      <h3>
+        <p>
+          Contact number: 011 958 5641
+        </p>
+      </h3>
+      <h3>
+        <p>
+          Email: GautentLicenceDep@gov.ac.za
+        </p>
+      </h3>
+      <h3>
+        <p>
+          We're only operating from Monday to Friday, Public Holidays we're closed!!!!!!!
+        </p>
+      </h3>
+      <h3>
+        <p>
+          Operating Hours are from 7:30 to 16:00
+        </p>
+      </h3> -->
+<button ion-button full (click)="sbt()">Submit</button>
+  </ion-list>
+</ion-content>
